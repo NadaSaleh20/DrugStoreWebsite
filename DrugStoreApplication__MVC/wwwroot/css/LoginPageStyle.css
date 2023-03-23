@@ -1,0 +1,117 @@
+﻿.imgSection {
+    background: url(../img/ruchindra-gunasekara-GK8x_XCcDZg-unsplash.png);
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    height: 100%;
+   
+}
+
+.ContentImg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #0093DD;
+    opacity: 0.87;
+    display: inline-block;
+
+}
+
+
+.imgfooter {
+   position: absolute;
+    left: 270px;
+    top: 130px;
+    z-index: 10;
+    height: 120px;
+    width: 131px;
+ 
+}
+.h1footer {
+    font-family: Dosis;
+    color: #FFFFFF;
+    z-index: 10;
+    position: absolute;
+    margin-top: 273px;
+    margin-left: 150px;
+  
+}
+.paraFooter {
+    font-family: Open sans-serif;
+    color: #F1F1F1;
+    z-index: 10;
+    position: absolute;
+    margin-top: 355px;
+    margin-left: 188px;
+}
+
+
+.LoginSection{
+   width: 50%;
+   position: absolute;
+   left: 0px;
+   height: 100%;
+
+}
+
+.LoginSection h1{
+  font-family: Roboto;
+    font-weight:550;
+    color: #484646;
+    margin-top: 180px;
+    margin-left: 85px;
+}
+
+#ArrowRigtIcon{
+    margin-top: -80px;
+    margin-left: 300px;
+
+}
+
+.LoginSection p{
+    font-family: Roboto;
+    color: #707070;
+    margin-top: -15px;
+    margin-left: 80px;
+}
+.input1{
+    margin-top: 10px;
+    margin-left: 75px;
+    width: 510px;
+    height: 54px;
+}
+.input2{
+    margin-top: 10px;
+    margin-left: 75px;
+    width: 510px;
+    height: 54px;
+}
+
+#check{
+    margin-left: 80px;
+}
+
+#checkLabel{
+    color: #707070;
+}
+
+
+#loginButton{
+    margin-left: 76px;
+    border-radius: 25px;
+    width: 510px;
+}
+
+#inputMange1{
+     background-color:#F9F9F9;
+}
+
+#inputMange2{
+     background-color:#F9F9F9;
+}
+
+
+
+

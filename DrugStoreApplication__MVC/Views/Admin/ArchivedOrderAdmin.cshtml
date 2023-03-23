@@ -1,0 +1,94 @@
+﻿@{
+    Layout = "";
+}
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<link href="~/css/AdminCurrentOrder.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<partial name="_header" />
+<div style="background-color: #f9f9f9; min-height:100%;">
+    <div class="TopSection">
+        <h3>Archived Orders </h3>
+        <div class="filtersRow">
+            <div class="input-group-prepend">
+                <button class="dropdown-toggle" id="ButtonDate" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="~/img/alendar.png" />
+                    Date
+                </button>
+                <div class="dropdown-menu" id="dropBody2">
+                    <h8 class="fromstyle"> From </h8>
+                    <h8 class="ToStyle"> To</h8>
+                    <input class="minInput" name="min" id="min" />
+                    <input class="maxInput" name="max" id="max" />
+
+                </div>
+            </div>
+            <div class="input-group-prepend">
+                <button class="dropdown-toggle" id="ButtonDate" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 336px;">
+                    <img src="~/img/6619705_and_badge_ecommerce_offer_price_icon.png" />
+                    Total Price
+                </button>
+                <div class="dropdown-menu" id="dropBody1">
+                    <h8 class="fromstyle"> Min Total Price </h8>
+                    <h8 class="ToStyle"> Max Total Price</h8>
+                    <img src="~/img/172506_money_icon.png" class="imgwithInput1" />
+                    <input id="FirstInput" />
+                    <img src="~/img/172506_money_icon.png" class="imgwithInput2" />
+                    <input id="SecondInput" />
+
+                </div>
+            </div>
+            <select class="filter-drug">
+            </select>
+            <select class="filter-Pharmcy">
+            </select>
+        </div>
+
+
+    </div>
+
+    <button class="ExportButton">
+        <img src="~/img/fax.png" width="20" />
+        Export & Print
+    </button>
+    <hr class="topLine" />
+    <div class="col-sm-12" style=" margin-top: 24px;">
+        <div class="add-remove-tbl table-responsive">
+            <table id="ArcivedOrderAdmin" class="table mt-3 table-light create-order-tabel " style="margin-left: 53px; width: 1207px;">
+                <thead class="text-center" style=" background-color: #D4EDF9;">
+                    <tr>
+                        <th scope="col" style="color: #000000; font-family: Segoe UI; font-weight: bold; font-size: medium; ">Created At</th>
+                        <th scope="col" style="color: #000000; font-family: Segoe UI; font-weight: bold; font-size: medium; ">Drug ID</th>
+                        <th scope="col" style="color: #000000; font-family: Segoe UI; font-weight: bold; font-size: medium; ">Drug Name</th>
+                        <th scope="col" style="color: #000000; font-family: Segoe UI; font-weight: bold; font-size: medium; ">Quantity</th>
+                        <th scope="col" style="color: #000000; font-family: Segoe UI; font-weight: bold; font-size: medium; ">Price Per Unit</th>
+                        <th scope="col" style="color: #000000; font-family: Segoe UI; font-weight: bold; font-size: medium; ">TotalPrice</th>
+                        <th scope="col" style="color: #000000; font-family: Segoe UI; font-weight: bold; font-size: medium; ">PharmcyName</th>
+                        <th scope="col" style="color: #000000; font-family: Segoe UI; font-weight: bold; font-size: medium; ">TotalPriceAll</th>
+                        <th scope="col" style="color: #000000; font-family: Segoe UI; font-weight: bold; font-size: medium; "> Status</th>
+
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
+<script src="~/lib/datatables/js/dataTables.bootstrap4.js"></script>
+<script src="~/js/ArchivedOrdersAdmin.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

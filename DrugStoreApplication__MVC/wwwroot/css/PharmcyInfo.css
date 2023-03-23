@@ -1,0 +1,114 @@
+﻿TopSide button
+
+
+.inner img {
+    border-radius: 50%;
+    width: 89px;
+    height: 90px;
+    margin-left: 40px;
+    margin-top: 30px;
+    background-color: #f9f9f9;
+}
+
+.cn {
+    width: 100%;
+    height: 700px;
+    background-color: #f9f9f9;
+}
+
+.inner {
+    display: inline-block;
+    width: 190px;
+    height: 2700px;
+    background-color: #FFFFFF;
+
+}
+.Firsta {
+    display: flex;
+    background-color: #D2ECF9;
+    margin-top: 40px;
+    height: 60px;
+    text-align: center;
+}
+
+.Firsta a {
+    color: #216F97;
+    text-decoration: none;
+    background-color: transparent;
+    padding: 1em;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none !important;
+    margin: 0 auto;
+    font-weight: bold;
+}
+.SecondTag {
+    margin-top: 50px;
+    text-align: center;
+}
+    .SecondTag a {
+        margin-top: 40px;
+        text-align: center;
+        color: #707070;
+        font-size: 20px;
+        margin-left: -10px;
+    }
+.AcountInformationheader {
+    font-size: 18px;
+    color: #0093DD;
+    font-weight: 600;
+}
+.FirstH {
+    color: #B1B1B1;
+    font-size: 18px;
+    margin-top: 70px;
+}
+.outer {
+    display: inline-block;
+    width: 2000px;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+    .outer img {
+        width: 18px;
+        height: 18px;
+    }
+.boxInfon {
+    background-color: #FFFFFF;
+    height: 200px;
+}
+.Box {
+    position: absolute;
+    display: inline-block;
+    margin-top: 130px;
+    margin-left: 50px;
+}
+    .Box h1 {
+        color: #262525;
+        font-weight: bold;
+        font-size: 18px;
+    }
+label {
+    color: #0093DD;
+    font-family: Roboto;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+input {
+    /*border: none;*/
+    margin-left: 50px;
+   
+}
+.buttonEditInfo {
+    margin-top: 20px;
+    margin-left: 1007px;
+    background-color: #168305;
+    border-color: #B1B1B1;
+    color: #FFFFFF;
+}
+.ColoredTag {
+    background-color: #D2ECF9;
+}
+

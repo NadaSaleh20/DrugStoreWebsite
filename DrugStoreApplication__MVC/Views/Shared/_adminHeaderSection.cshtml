@@ -1,0 +1,52 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@inject UserManager<DataBase.Data.PharmcyInfo> UserManager;
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<img src="~/img/Mask Group 2.png" style="width: 33px; margin-top: -99px; margin-left: 1177px;" />
+<h5 class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 14px; font-weight: 200; margin-top: -66px; margin-left: 1225px; position: absolute; ">
+    @UserManager.GetUserName(User)
+</h5>
+<div class="dropdown-menu" style=" top: 0px; margin-left: 20px;">
+    <a class="dropdown-item" id="Upload" style="color: #000000; font-weight: 500;"
+       data-toggle="modal" data-target="#myModalUpload">Upload Drug</a>
+    <a class="dropdown-item" style="color: #000000; font-weight: 500;" asp-controller="Admin" asp-action="CurrentOrderAdmin">Procee Order</a>
+    <a class="dropdown-item" style="color: #000000; font-weight: 500;" asp-action="ArchivedOrderAdmin" asp-controller="Admin">Archived Order</a>
+    <a class="dropdown-item" style="color: #000000; font-weight: 500;" asp-controller="Admin" asp-action="PharmcyiesPage">Pharmacies</a>
+    <a class="dropdown-item" asp-controller="home" asp-action="SiginOut" style="color: #000000; font-weight: 500; ">Sign out</a>
+</div>
+
+@*----------------------------------------------PopUp------------------------------------------------*@
+
+<div class="modal fade " id="myModalUpload" role="dialog">
+    <div class="modal-dialog " role="document">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" style=" margin-right: -445px;">&times;</button>
+                <h4 class="modal-title" style="margin-right: 312px;">Upload Drug</h4>
+            </div>
+            <div class="modal-body">
+                <form asp-controller="Admin" asp-action="UploadDrug" method="post" enctype="multipart/form-data">
+                    <div class="custom-file" id="customFile" lang="es">
+                        <input type="file" name="postedFile" class="custom-file-input" id="exampleInputFile" aria-describedby="fileHelp">
+                        <label class="custom-file-label" for="exampleInputFile">
+                            Select file...
+                        </label>
+                    </div>
+                    <input type="submit" value="Import" style=" margin-top: 14px; border: none; width: 92px; height: 37px; background-color: #168305; color: #FFFFFF; font-weight: 500;" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        padding-right: 0 !important;
+    }
+</style>
+@*<script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>*@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+

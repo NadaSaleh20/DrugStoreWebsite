@@ -1,0 +1,22 @@
+﻿td{
+    text-align:center
+}
+
+.statusMange {
+    color: #946800;
+    font-weight: 700;
+}
+.pb-3 {
+    height: 1100px;
+}
+
+#CurrentOrderTabel_info {
+    display: none;
+}
+
+.pagination {
+    margin-left: -52px;
+}
+.MangeDName {
+    width: 256px;
+}

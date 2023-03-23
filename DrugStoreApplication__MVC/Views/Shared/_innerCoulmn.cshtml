@@ -1,0 +1,24 @@
+﻿<link href="~/css/PharmcyInfo.css" rel="stylesheet" />
+<div class="inner">
+    <img src="~/img/image-removebg-preview (2).png" style="margin-left: 34px;" /><br />
+    <div class="Firsta" id="title1">
+        <a asp-action="PharmcyInfo" asp-controller="Home">Acount Information</a><br />
+    </div>
+    <div class="SecondTag" id="title2">
+        <a  asp-action="CurrentOrder" asp-controller="Orders"> Current Order</a><br />
+    </div>
+    <div class="SecondTag" id="title3">
+        <a asp-action="AricvedOrder" asp-controller="Orders"> Archived Order</a><br />
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script>
+    $(document).ready(function () {
+        //display style from title1 ANd Add it to title2 
+        $('#title2').on('click', function (e) {
+            $('#title2').addClass('ColoredTag');
+        });
+
+    });
+</script>
+

@@ -1,0 +1,77 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@using System.Data;
+
+@inject UserManager<DataBase.Data.PharmcyInfo> UserManager;
+
+<link href="~/css/CreateOrder.css" rel="stylesheet" />
+<link href="~/lib/datatables/css/dataTables.bootstrap4.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="BigContainer">
+    <div class="HeaderBox">
+        <img src="~/img/3671775_home_icon.png" />
+        <span class="Orderheader">/New Order</span>
+    </div>
+    <div class="smallBox">
+        <img src="~/img/pharmacy.png" />
+        <div style=" margin-top: -22px; margin-left: 55px;">
+            <h3>Pharmcy Name</h3>
+            <h4> @UserManager.GetUserName(User)</h4>
+            <div style=" margin-top: -20px;">
+                <a style=" margin-left: 1081px;" asp-action="CurrentOrder" asp-controller="orders">MyOrders>></a>
+
+            </div>
+        </div>
+
+    </div>
+    <h2 class="subTitle">
+        Create your order now
+    </h2>
+    <div class="createOrd">
+        <h5 style="margin-left:20px">Drug Name</h5>
+        <h5 style=" margin-left: 316px;">Quantity</h5>
+        <div class="MangeDrugName">
+            <select class="chose-drug">
+            </select>
+            <input id="DrugQun" type="number" min="1" />
+            <button id="AddButton">Add</button>
+        </div>
+        <div class="col-sm-12" style="margin-top: 30px;">
+            <div class="add-remove-tbl table-responsive">
+                <table id="AddorderRow" class="table mt-3 table-light create-order-tabel ">
+
+                    <thead class="text-center" style=" background-color: #D4EDF9;">
+                        <tr>
+                            <th scope="col">DrugID</th>
+                            <th scope="col">DrugName</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">DrugStatus</th>
+                            <th scope="col">PricePerUnit(NIS)</th>
+                            <th scope="col">TotalPrice(NIS)</th>
+                            <th scope="col">Operation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <button id="saveButton"> Save</button>
+
+</div>
+
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/OrderCreation.js"></script>
+
+
+
+
+
+
+
+

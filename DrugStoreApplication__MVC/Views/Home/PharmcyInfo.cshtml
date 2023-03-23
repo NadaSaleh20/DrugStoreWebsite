@@ -1,0 +1,48 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@inject UserManager<DataBase.Data.PharmcyInfo> UserManager;
+@using DrugStoreApplication__MVC.Models;
+<link href="~/css/PharmcyInfo.css" rel="stylesheet" />
+@{
+    var text = new TopHederDeitles
+    {
+        firstHeader = "/Pharmacy Profile",
+        SecondHeader = "/Account Information"
+    };
+}
+
+<div class="cn">
+    <partial name="_innerCoulmn" />
+    <partial name="_TopRow" model="text" />
+    <div class="Box" id="BoxContaier">
+        <h1>Account Information</h1>
+        <img id="edit" src="~/img/Edit.png" style=" margin-top: -55px; margin-left: 180px; width: 44px;" />
+        <div class="boxInfon" style="background-color: #FFFFFF; height: 200px; width: 1124px; margin-top: 20px; ">
+            <label>
+                Pharmacy Name
+            </label>
+            <input id="PharmcyName" type="text" value="@UserManager.GetUserName(User)" readonly style="color: #707070; font-size: 16px;" /><br />
+            <label>
+                Account Number
+            </label>
+            <input id="PharmcyCode" type="number" value="@UserManager.Users.Where(x => x.UserName == @UserManager.GetUserName(User)).Select(x => x.AccountNum).FirstOrDefault()" readonly style="color: #707070; font-size: 16px;" /><br />
+
+        </div>
+    </div>
+    <div class="Box" id="Box2">
+        <h1 style=" margin-top: 330px; margin-left: -2px;">Edit Password</h1>
+        <img id="editButon2" src="~/img/Edit.png" style=" margin-top: -55px; margin-left: 130px; width: 44px;" />
+        <div id="ContainerPassword" class="ContainerChangePassword" style=" background-color: #FFFFFF; height: 150px; width: 1124px; margin-top: 10px; margin-top: 20px; display:none">
+
+            <label>
+                Current Password
+            </label>
+            <input id="CurrentPassword" type="text" value="" style="color: #707070; font-size: 16px;" /><br />
+            <label>
+                New Password
+            </label>
+            <input id="NewPassword" type="text" value="" style="color: #707070; font-size: 16px; margin-left: 70px; " /><br />
+        </div>
+    </div>
+</div>
+<script src="~/js/PharmcyInfo.js"></script>
+

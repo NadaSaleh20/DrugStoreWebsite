@@ -1,0 +1,37 @@
+﻿@{
+    var text = new TopHederDeitles
+    {
+        firstHeader = "/Pharmacy Profile",
+        SecondHeader = "/Aricved Order"
+        
+    };
+}
+<link href="~/css/ArcivhedOrder.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<partial name="_innerCoulmn" />
+<partial name="_TopRow" model="text" />
+
+<div class="col-sm-12" style="margin-top: -2620px; position: absolute; margin-left: 200px; width: 1000px; ">
+    <div class="add-remove-tbl table-responsive">
+        <table id="ArcviedOrderTabel" class="table mt-3 table-light create-order-tabel ">
+            <thead class="text-center" style=" background-color: #D4EDF9;">
+                <tr>
+                    <th scope="col">DrugID</th>
+                    <th scope="col">DrugName</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">DrugStatus</th>
+                    <th scope="col">PricePerUnit(NIS)</th>
+                    <th scope="col">TotalPrice(NIS)</th>
+                    <th scope="col" style="color: #212529;">OrderStatus</th>
+                    <th scope="col">date</th>
+
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/AricvhedOrder.js"></script>

@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@inject UserManager<DataBase.Data.PharmcyInfo> UserManager;
+<img src="~/img/imgFarmcy.png" class="Img2" style=" margin-left: 1009px; width: 40px; height: 41px; margin-top: -63px; position: absolute;" />
+<a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" font-size: 14px; font-weight: 200; margin-top: -53px; margin-left: 1062px; position: absolute;">
+    @UserManager.GetUserName(User)
+</a>
+<div class="dropdown-menu">
+    <a class="dropdown-item" style="color: #000000; font-weight: 500;"
+       asp-action="PharmcyInfo" asp-controller="Home">Pharmacy Profile</a>
+    <a class="dropdown-item" style="color: #000000; font-weight: 500;"
+       asp-action="AricvedOrder" asp-controller="Orders">Archived Order</a>
+    <a class="dropdown-item" style="color: #000000; font-weight: 500;"
+       asp-action="CurrentOrder" asp-controller="Orders">My Order</a>
+    <a class="dropdown-item" asp-controller="home" asp-action="SiginOut" style="color: #000000; font-weight: 500; ">Sign out</a>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<form class="form-inline">
+    <button class="btn btn-outline-success my-2 my-sm-0 mangeButtonOrder" type="submit"
+            asp-controller="orders" asp-action="CreateOrder" style=" background-color: #A7CC3A; color: #FFFFFF; margin-left: 1207px; top: 18px; position: absolute;">
+        OrderNow
+    </button>
+</form>
+
+
+
+

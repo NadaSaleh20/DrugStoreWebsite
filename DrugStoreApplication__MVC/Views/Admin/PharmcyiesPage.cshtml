@@ -1,0 +1,84 @@
+﻿
+
+@model List<Customer>;
+@{
+    Layout = "";
+}
+
+
+<link href="~/css/site.css" rel="stylesheet" />
+<partial name="_header" />
+<div style="background-color: #f9f9f9; min-height: 100%;">
+    <div class="TopSide">
+        <h2>Customers</h2>
+        <button data-toggle="modal" data-target="#myModal">
+            <img src="~/img/Download_from_cloud.png" />
+            Import Customers
+        </button>
+    </div>
+    <div class="col-sm-12">
+        <div class="add-remove-tbl table-responsive">
+            <table id="CustomerName" class="table mt-3 table-light create-order-tabel " style="width: 1100px; margin-left: 97px;">
+                <thead class="text-center" style=" background-color: #D4EDF9;">
+                    <tr>
+                        <th scope="col">Account Number</th>
+                        <th scope="col">Pharmcy Name</th>
+
+
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+
+
+    @*-------------------------------------------------------------------------POPUP---------------------------------------------------------------------*@
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog " role="document">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" style=" margin-right: -445px;">&times;</button>
+                    <h4 class="modal-title" style=" margin-right: 252px;">Upload Customers</h4>
+                </div>
+                <div class="modal-body">
+                    <form asp-controller="Admin" asp-action="UploadPharmcyies" method="post" enctype="multipart/form-data">
+                        <div class="custom-file" id="customFile" lang="es">
+                            <input type="file" name="postedFile" class="custom-file-input" id="exampleInputFile" aria-describedby="fileHelp">
+                            <label class="custom-file-label" for="exampleInputFile">
+                                Select file...
+                            </label>
+                        </div>
+                        <input type="submit" value="Import" style=" margin-top: 14px; border: none; width: 92px; height: 37px; background-color: #168305; color: #FFFFFF; font-weight: 500;" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+    body {
+        padding-right: 0 !important;
+    }
+
+    #CustomerName_filter {
+        display: none;
+    }
+
+    .pagination {
+        margin-left: -52px;
+    }
+  
+</style>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
+<script src="~/lib/datatables/js/jquery.dataTables.js"></script>
+<script src="~/lib/datatables/js/dataTables.bootstrap4.js"></script>
+<script src="~/js/DisplayCustomerPharmcies.js"></script>

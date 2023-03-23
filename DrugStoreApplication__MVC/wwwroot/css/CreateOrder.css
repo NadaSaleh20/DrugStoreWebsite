@@ -1,0 +1,153 @@
+﻿.BigContainer {
+    width: 100%;
+    height: 700px;
+    background-color: #f9f9f9;
+    margin-top: -6px;
+}
+.HeaderBox {
+    padding-top: 18px;
+}
+.HeaderBox img
+{
+    width: 18px;
+    height: 18px;
+    margin-top: -5px;
+    margin-left: 50px;
+}
+.Orderheader {
+    font-size: 18px;
+    color: #0093DD;
+    font-weight: 600;
+}
+.smallBox {
+    margin-top: 20px;
+    margin-left: 40px;
+    background-color: #FFFFFF;
+    width: 1267px;
+    height: 40px;
+}
+
+    .smallBox img {
+        display: inline;
+        width: 20px;
+        height: 20px;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+
+    .smallBox h3 {
+        display: inline;
+        font-size: 15px;
+        padding-top: 50px;
+        margin-left: 10px;
+    }
+    .smallBox h4 {
+        display: inline;
+        font-weight: 100;
+        font-size: 15px;
+        margin-left: 10px;
+        margin-top: 2px;
+    }
+  #myOrderslink {
+    display: inline;
+    margin-left: 1130px;
+    font-size: 13px;
+    color: #0093DD;
+    padding-top: 10px;
+}
+.subTitle {
+    position: absolute;
+    font-size: 14px;
+    margin-top: 50px;
+    margin-left: 40px;
+    color: #000000;
+    font-weight: 500;
+}
+.createOrd {
+    position: relative;
+    margin-top: 100px;
+    margin-left: 40px;
+    width: 1225px;
+    border: 1px solid #B1B1B1;
+    background-color: #F9F9F9;
+}
+    .createOrd h5 {
+        display: inline;
+        color: #707070;
+        font-size: 13px;
+        font-weight: bold;
+    }
+.chose-drug{
+    width: 390px;
+    height: 40px;
+    background-color: #FFFFFF;
+    margin-left: 20px;
+    border: 1px solid #E3E3E3;
+}
+.Update-drug {
+    width: 390px;
+    height: 40px;
+    background-color: #FFFFFF;
+    margin-left: 20px;
+    border: 1px solid #E3E3E3;
+}
+#inputDrugName::placeholder {
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+.MangeDrugName img {
+    position: absolute;
+}
+#DrugQun {
+    width: 60px;
+    height: 27px;
+    position: absolute;
+    background-color: #FFFFFF;
+    margin-left: 20px;
+    border: 1px solid #E3E3E3;
+}
+
+#AddButton {
+    width: 70px;
+    height: 30px;
+    background-color: #0093DD;
+    margin-left: 130px;
+    border: 1px solid #E3E3E3;
+    color: #FFFFFF;
+    position: absolute;
+    margin-top: -2px;
+}
+
+.select2-selection,select2-selection--single {
+    margin-left: 20px;
+    height: 40px;
+}
+tr {
+    text-align: center;
+    color: #707070;
+}
+.redClass {
+    background-color: #EE0E08;
+}
+
+#editButton {
+    background-color: #168305;
+    border: none;
+    width: 70px;
+    height: 30px;
+    color: #FFFFFF;
+}
+#saveButton {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 40px;
+    width: 80px;
+    background-color: #168305;
+    border: none;
+    color: #FFFFFF;
+    height: 35px;
+}
+.MangeDName {
+    width: 256px;
+}

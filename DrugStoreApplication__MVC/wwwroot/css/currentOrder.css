@@ -1,0 +1,27 @@
+﻿.pb-3 {
+    height: 1100px;
+}
+
+#CurrentOrderTabel_info {
+    display: none;
+}
+
+.pagination {
+    margin-left: -52px;
+}
+
+.MangeDName {
+    width: 256px;
+}
+#UpdateButton {
+    background-color: #168305;
+    border: none;
+    color: #FFFFFF;
+    margin-left: 706px;
+}
+.select2 select2-container select2-container--default select2-container--below select2-container--focus {
+    width: 224px;
+}
+.select2-search__field {
+    margin-left: 0px;
+}

@@ -1,0 +1,75 @@
+﻿
+@{
+    var text = new TopHederDeitles
+    {
+        firstHeader = "/Pharmacy Profile",
+        SecondHeader = "/Current Orders"
+
+    };
+}
+<link href="~/css/currentOrder.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<partial name="_innerCoulmn" />
+<partial name="_TopRow" model="text" />
+@*---------------------------------------------------------PoPUP Edit----------------------------------------------------------*@
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog " role="document">
+
+        <!-- Modal content-->
+        <div class="modal-content" style="width: 807px; margin-left: -150px;">
+            <div class="modal-header" style=" padding: 1rem 4.5rem;">
+                <button type="button" class="close" data-dismiss="modal" style=" margin-right: -445px;">&times;</button>
+                <h4 class="modal-title" style=" margin-right: 252px;">Updates Orders</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table mt-3 table-light " id="editTabel">
+                    <thead class="text-center" style=" background-color: #D4EDF9;">
+                        <tr>
+
+                            <th scope="col">Drug ID</th>
+                            <th scope="col">Drug Name</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Price Per Unit</th>
+                            <th scope="col">TotalPrice</th>
+                            <th scope="col" style="display:none;">orderId</th>
+                            <th scope="col" style="display:none;">finalOrderId</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyid">
+                    </tbody>
+                </table>
+                <button id="UpdateButton">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*--------------------------------------------------------- END PoPUP Edit----------------------------------------------------------*@
+
+<div class="col-sm-12" style="margin-top: -2620px; position: absolute; margin-left: 200px; width: 1000px; ">
+    <div class="add-remove-tbl table-responsive">
+        <table id="CurrentOrderTabel" class="table mt-3 table-light create-order-tabel ">
+            <thead class="text-center" style=" background-color: #D4EDF9;">
+                <tr>
+                    <th scope="col">DrugID</th>
+                    <th scope="col">DrugName</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">DrugStatus</th>
+                    <th scope="col">PricePerUnit(NIS)</th>
+                    <th scope="col">TotalPrice(NIS)</th>
+                    <th scope="col">OrderStatus</th>
+                    <th scope="col">date</th>
+                    <th scope="col">total price</th>
+
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/currentOrder.js"></script>
+
